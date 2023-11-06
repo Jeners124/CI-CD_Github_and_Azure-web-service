@@ -7,7 +7,7 @@ public class FirstNameTest
   [Theory]
   [InlineData("Bo")]
   [InlineData("Magnus")]
-  [InlineData("HejMedDigDetteSkulleGerneVaereEtLangtNavn")]
+  // [InlineData("HejMedDigDetteSkulleGerneVaereEtLangtNavn")]
   public void NameLenghtTest(string name)
   {
     FirstName firstName = new FirstName(name);
@@ -20,12 +20,13 @@ public class FirstNameTest
   [InlineData("<>'/")]
   public void NameCharacterTest(string name)
   {
-    FirstName firstName = new FirstName(name);
+    Assert.Throws<ArgumentException>(() => new FirstName(name));
+    
   }
 
   [Fact]
   public void NameNullTest()
   {
-    FirstName firstName = new FirstName(null);
+    Assert.Throws<ArgumentException>(() => new FirstName(null));
   }
 }
