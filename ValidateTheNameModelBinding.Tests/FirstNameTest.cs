@@ -6,7 +6,7 @@ public class FirstNameTest
 {
   [Theory]
   [InlineData("Bo")]
-  [InlineData("Magnus")]
+  [InlineData("Jens")]
   // [InlineData("HejMedDigDetteSkulleGerneVaereEtLangtNavn")]
   public void NameLenghtTest(string name)
   {
