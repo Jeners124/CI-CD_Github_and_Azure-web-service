@@ -21,12 +21,11 @@ public class FirstNameTest
   public void NameCharacterTest(string name)
   {
     Assert.Throws<ArgumentException>(() => new FirstName(name));
-    
   }
 
   [Fact]
   public void NameNullTest()
   {
-    Assert.Throws<ArgumentException>(() => new FirstName(null));
+    Assert.Throws<ArgumentException>(() => new FirstName(null!));
   }
 }
