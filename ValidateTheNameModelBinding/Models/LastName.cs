@@ -5,6 +5,7 @@ namespace ValidateTheNameModelBinding.Models
   public class LastName
   {
     private string _lastName;
+    
     public LastName(string lastName)
     {
       IsNameValid(lastName);

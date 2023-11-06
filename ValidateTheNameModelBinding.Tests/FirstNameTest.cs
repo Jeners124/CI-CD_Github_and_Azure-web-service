@@ -10,22 +10,22 @@ public class FirstNameTest
   [InlineData("HejMedDigDetteSkulleGerneVaereEtLangtNavn")]
   public void NameLenghtTest(string name)
   {
-    //FirstName firstName = new FirstName(name);
+    FirstName firstName = new FirstName(name);
   }
 
   [Theory]
   [InlineData("")]
   [InlineData("123")]
-  [InlineData("æøå")]
+  [InlineData("ï¿½ï¿½ï¿½")]
   [InlineData("<>'/")]
   public void NameCharacterTest(string name)
   {
-    //FirstName firstName = new FirstName(name);
+    FirstName firstName = new FirstName(name);
   }
 
   [Fact]
   public void NameNullTest()
   {
-    //FirstName firstName = new FirstName(null);
+    FirstName firstName = new FirstName(null);
   }
 }
